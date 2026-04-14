@@ -2,10 +2,9 @@ Package: Ikram.td5
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Ikram", "Ab", , "Ikram.ab@example.com", role = c("aut", "cre"))
+Description: Un premier package R pour analyser des donnees de trajets velo a Nantes.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
