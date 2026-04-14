@@ -139,7 +139,6 @@ plot_distribution_semaine <- function(trajet) {
 
 
 
-
 #' Filtrer un jeu de donnees par numero de boucle
 #'
 #' @param trajet Un data.frame de trajets velo.
@@ -154,15 +153,9 @@ filtrer_trajet <- function(trajet, boucle) {
 
   stopifnot(is.character(boucle))
 
-  i <- grep("^Numéro de boucle$", names(trajet))
-  if (length(i) != 1) {
-    stop("Colonne 'Numéro de boucle' introuvable ou ambigue.")
-  }
-
   trajet[
-    as.character(trajet[[i]]) %in% boucle,
+    as.character(trajet[["Numéro de boucle"]]) %in% boucle,
     ,
     drop = FALSE
   ]
 }
-

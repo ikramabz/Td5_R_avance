@@ -1,0 +1,42 @@
+---
+title: "Filtrer une boucle et tracer un graphique"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Filtrer une boucle et tracer un graphique}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Ikram.td5)
+```
+
+Cette vignette montre comment filtrer les données `df_velo`
+sur une ou plusieurs boucles, puis tracer la distribution
+des trajets par jour de la semaine.
+
+## Filtrer les données
+
+On filtre ici les données pour ne conserver que les boucles
+"880" et "881".
+
+```{r}
+df <- filtrer_trajet(df_velo, boucle = c("880", "881"))
+head(df)
+```
+
+## Tracer le graphique
+
+On peut ensuite représenter la distribution des trajets
+par jour de la semaine.
+
+```{r}
+plot_distribution_semaine(df)
+```
